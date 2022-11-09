@@ -1,0 +1,90 @@
+.pokemons {
+    /* Deixando o display como se fosse uma grade */
+    display: grid;
+    grid-template-columns: 1fr; /* 1 fração para cada lado da tabela (50% da tela para cada coluna)*/
+    /* O estilo da lista se transforma em tabela*/
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: .5rem;
+    background-color: #49d0b0;
+    color: white;
+    border-radius: 1rem;
+
+}
+
+.pokemon .number {
+    color: black;
+    opacity: .4;
+    text-align: right;
+    font-size: .7rem;
+}
+
+.pokemon .name {
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon .detail .types {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pokemon .detail .types .type {
+    background-color: #61e1ca;
+    color: white;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+}
+
+.pokemon .detail img {
+    max-width: 100%;
+    height: 70px;
+    align-self: flex-end;
+}
+
+@media screen and (min-width: 360px){
+    .pokemons{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .pokemons{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .pokemons{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
